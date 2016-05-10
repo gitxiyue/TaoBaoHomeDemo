@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="GridCell">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="287"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="200" height="287"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eh7-Oi-jhF" userLabel="约束参照物">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="284"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="jAW-JJ-YY3" userLabel="cover">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="jAW-JJ-YY3" secondAttribute="height" multiplier="1:1" id="8TZ-VY-oVT"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="户外腰包男女士跑步运动音乐手机包轻薄贴身防盗隐形腰包旅游钱包" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjj-l7-Jrg">
+                        <rect key="frame" x="8" y="204" width="184" height="42"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="42" id="jVM-LA-8GX"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.27311027486910999" green="0.27311027486910999" blue="0.27311027486910999" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="￥19800.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="peY-Yj-ms3">
+                        <rect key="frame" x="8" y="250" width="72" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="72" id="Qcq-8P-4vJ"/>
+                            <constraint firstAttribute="height" constant="21" id="Rfv-oY-Dj5"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="1" green="0.22380854199950428" blue="0.1093919723854625" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="热销" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t3c-6M-HCj">
+                        <rect key="frame" x="157" y="250" width="35" height="21"/>
+                        <color key="backgroundColor" red="1" green="0.21406040150535466" blue="0.041531786520991099" alpha="0.73443040780141844" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="35" id="9lO-Vt-cPK"/>
+                            <constraint firstAttribute="height" constant="21" id="bKN-d2-si2"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="peY-Yj-ms3" firstAttribute="top" secondItem="rjj-l7-Jrg" secondAttribute="bottom" constant="4" id="10J-v3-LK6"/>
+                <constraint firstAttribute="trailing" secondItem="eh7-Oi-jhF" secondAttribute="trailing" id="2UK-DC-xO4"/>
+                <constraint firstItem="eh7-Oi-jhF" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Dh6-3k-DHt"/>
+                <constraint firstItem="jAW-JJ-YY3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="EYV-OQ-1DU"/>
+                <constraint firstAttribute="trailing" secondItem="t3c-6M-HCj" secondAttribute="trailing" constant="8" id="Eru-88-3ir"/>
+                <constraint firstItem="jAW-JJ-YY3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="HQ7-kb-IPw"/>
+                <constraint firstItem="peY-Yj-ms3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="NtK-bO-V4W"/>
+                <constraint firstItem="eh7-Oi-jhF" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Otk-i2-gim"/>
+                <constraint firstItem="rjj-l7-Jrg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="PSB-9i-t41"/>
+                <constraint firstAttribute="bottom" secondItem="eh7-Oi-jhF" secondAttribute="bottom" constant="3" id="ShZ-hW-Hdz"/>
+                <constraint firstItem="jAW-JJ-YY3" firstAttribute="width" secondItem="eh7-Oi-jhF" secondAttribute="width" id="WAa-FN-Wpe"/>
+                <constraint firstAttribute="trailing" secondItem="rjj-l7-Jrg" secondAttribute="trailing" constant="8" id="XZh-q0-f9v"/>
+                <constraint firstItem="t3c-6M-HCj" firstAttribute="top" secondItem="rjj-l7-Jrg" secondAttribute="bottom" constant="4" id="gNG-we-yEL"/>
+                <constraint firstItem="rjj-l7-Jrg" firstAttribute="top" secondItem="jAW-JJ-YY3" secondAttribute="bottom" constant="4" id="l4u-Xk-qX7"/>
+            </constraints>
+            <size key="customSize" width="204" height="289"/>
+            <connections>
+                <outlet property="bgview" destination="eh7-Oi-jhF" id="OZ8-v6-GGR"/>
+                <outlet property="flagLab" destination="t3c-6M-HCj" id="5tN-Dl-5RF"/>
+                <outlet property="iv" destination="jAW-JJ-YY3" id="EnT-xi-T1d"/>
+                <outlet property="titleLab" destination="rjj-l7-Jrg" id="Uc9-HJ-lji"/>
+            </connections>
+            <point key="canvasLocation" x="382" y="425.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="image1.jpg" width="682" height="1024"/>
+    </resources>
+</document>
