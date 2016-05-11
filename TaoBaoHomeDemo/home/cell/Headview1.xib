@@ -3,14 +3,31 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR">
-            <rect key="frame" x="0.0" y="0.0" width="415" height="169"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="Headview1">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="94"/>
             <autoresizingMask key="autoresizingMask"/>
-            <point key="canvasLocation" x="481.5" y="441.5"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TSZ-2z-Koq">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="94"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="TSZ-2z-Koq" secondAttribute="height" multiplier="4:1" id="9WT-Sb-WgV"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="TSZ-2z-Koq" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="Xag-8H-2R1"/>
+                <constraint firstAttribute="trailing" secondItem="TSZ-2z-Koq" secondAttribute="trailing" id="juI-Pt-loj"/>
+                <constraint firstItem="TSZ-2z-Koq" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="zCr-ig-2KU"/>
+            </constraints>
+            <connections>
+                <outlet property="scroll" destination="TSZ-2z-Koq" id="L0v-BI-duN"/>
+            </connections>
+            <point key="canvasLocation" x="458.5" y="367"/>
         </collectionReusableView>
     </objects>
 </document>

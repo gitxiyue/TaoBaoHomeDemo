@@ -9,10 +9,13 @@
 #import "FirstViewController.h"
 #import "GridCell.h"
 #import "GridCell2.h"
+#import "GridCell3.h"
 #import "Headview1.h"
 #import "Headview2.h"
 #import "Headview3.h"
+#import "Footview0.h"
 #import "Footview1.h"
+
 
 #import "Cell1.h"
 
@@ -55,10 +58,15 @@
     //[grid setAccessibilityElements:nil];
     [_grid registerNib:[UINib nibWithNibName:@"GridCell" bundle:nil] forCellWithReuseIdentifier:@"GridCell"];
     [_grid registerNib:[UINib nibWithNibName:@"GridCell2" bundle:nil] forCellWithReuseIdentifier:@"GridCell2"];
+    [_grid registerNib:[UINib nibWithNibName:@"GridCell3" bundle:nil] forCellWithReuseIdentifier:@"GridCell3"];
+    
     [_grid registerNib:[UINib nibWithNibName:@"Cell1" bundle:nil] forCellWithReuseIdentifier:@"Cell1"];
+    
     [_grid registerNib:[UINib nibWithNibName:@"Headview1" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"headview1"];
     [_grid registerNib:[UINib nibWithNibName:@"Headview2" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"headview2"];
     [_grid registerNib:[UINib nibWithNibName:@"Headview3" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"headview3"];
+    
+    [_grid registerNib:[UINib nibWithNibName:@"Footview0" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"footview0"];
     [_grid registerNib:[UINib nibWithNibName:@"Footview1" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"footview1"];
 }
 
@@ -81,17 +89,20 @@
 }
 
 - (NSInteger) numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 3;
+    return 4;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     if (section == 0) {
-        return 6;
+        return 10;
     }
     if (section == 1) {
-        return 4;
+        return 6;
     }
     if (section == 2) {
+        return 4;
+    }
+    if (section == 3) {
         return 10;
     }
     return 0;
@@ -100,20 +111,22 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *gridcell = nil;
     if (indexPath.section == 0) {
-        Cell1 *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell1" forIndexPath:indexPath];
+        GridCell3 *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"GridCell3" forIndexPath:indexPath];
         gridcell = cell;
     }
     else if (indexPath.section == 1) {
+        Cell1 *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell1" forIndexPath:indexPath];
+        gridcell = cell;
+    }
+    else if (indexPath.section == 2) {
         GridCell2 *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"GridCell2" forIndexPath:indexPath];
         gridcell = cell;
     }
     else {
+        //可以加载更多的那个cell
         GridCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"GridCell" forIndexPath:indexPath];
         gridcell = cell;
     }
-    gridcell.layer.shadowColor = RGB(0, 0, 0).CGColor;
-    gridcell.layer.shadowOffset = CGSizeMake(1, 4);
-    gridcell.layer.shadowRadius = 4;
     return gridcell;
 }
 
@@ -125,15 +138,18 @@
             
             Headview1 *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"headview1" forIndexPath:indexPath];
             reusableview = headerView;
-            reusableview.backgroundColor = [UIColor purpleColor];
         }
-    }else if (indexPath.section == 1) {
+        if (kind == UICollectionElementKindSectionFooter) {
+            Footview0 *footview = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"footview0" forIndexPath:indexPath];
+            reusableview = footview;
+        }
+    }else if (indexPath.section == 2) {
         if (kind == UICollectionElementKindSectionHeader){
             
             Headview2 *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"headview2" forIndexPath:indexPath];
             reusableview = headerView;
         }
-    }else if (indexPath.section == 2) {
+    }else if (indexPath.section == 3) {
         if (kind == UICollectionElementKindSectionHeader){
             
             Headview3 *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"headview3" forIndexPath:indexPath];
@@ -147,52 +163,79 @@
     return reusableview;
 }
 
+//item 宽高
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        XunLog(@"=====%f,%f", cell_height(200)+8, SCREEN_W);
-        return CGSizeMake(SCREEN_W, cell_height(190)+8);//cell_height(200)
+        //减1去除误差
+        XunLog(@"########%f", SCREEN_W/5-8/5 -1);
+        return CGSizeMake(SCREEN_W/5-8/5 -1, SCREEN_W/5 + 20);
     }
     if (indexPath.section == 1) {
-        return CGSizeMake(SCREEN_W/2-4/2, (SCREEN_W/2-4/2)*2/3 +48);
+        return CGSizeMake(SCREEN_W, cell_height(190)+8);//cell_height(200)
     }
     if (indexPath.section == 2) {
+        return CGSizeMake(SCREEN_W/2-4/2, (SCREEN_W/2-4/2)*2/3 +48);
+    }
+    if (indexPath.section == 3) {
         return CGSizeMake(SCREEN_W/2-4/2, SCREEN_W/2-4/2 +80);
     }
     return CGSizeMake(0, 0);
 }
 
+//head 宽高
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
     if (section == 0) {
-        return CGSizeMake(SCREEN_W, 350);
-    }
-    if (section == 1) {
-        return CGSizeMake(SCREEN_W, 50);
+        return CGSizeMake(SCREEN_W, SCREEN_W/4);
     }
     if (section == 2) {
+        return CGSizeMake(SCREEN_W, 50);
+    }
+    if (section == 3) {
         return CGSizeMake(SCREEN_W, 35);
     }
     return CGSizeMake(0, 0);
 }
 
+//foot 宽高
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section {
-    if (section == 2) {
+    if (section == 0) {
+        return CGSizeMake(SCREEN_W, 60);
+    }
+    if (section == 3) {
         return CGSizeMake(SCREEN_W, 110);
     }
     return CGSizeZero;
 }
 
+//边缘间距
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+    if (section == 0) {
+        return UIEdgeInsetsMake(4.0f, 4.0f, 4.0f, 4.0f);
+    }
+    return UIEdgeInsetsZero;
+}
+
+//x 宽度
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
     return 0;
 }
 
+//y 宽度
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
     if (section == 0) {
-        return 0;
+        return 2;
     }
     if (section == 1) {
+        return 0;
+    }
+    if (section == 2) {
         return 4;
     }
     return 2;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    XunLog(@"你选择的是%zd，%zd", indexPath.section, indexPath.row);
 }
 
 @end
