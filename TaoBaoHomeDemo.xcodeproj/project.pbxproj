@@ -19,6 +19,9 @@
 		A13DE19E1CE3122800328823 /* image2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A13DE19B1CE3122800328823 /* image2.jpg */; };
 		A13DE19F1CE3122800328823 /* image3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A13DE19C1CE3122800328823 /* image3.jpg */; };
 		A13DE1A01CE3122800328823 /* image4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A13DE19D1CE3122800328823 /* image4.jpg */; };
+		A13DE1A21CE3182500328823 /* toutiao.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A13DE1A11CE3182500328823 /* toutiao.jpg */; };
+		A13DE1A51CE32AD500328823 /* TaoTiaoView.m in Sources */ = {isa = PBXBuildFile; fileRef = A13DE1A41CE32AD500328823 /* TaoTiaoView.m */; };
+		A13DE1A71CE32AF300328823 /* TaoTiaoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A13DE1A61CE32AF300328823 /* TaoTiaoView.xib */; };
 		A19EDA531CE1BE0300AA35CB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A19EDA521CE1BE0300AA35CB /* main.m */; };
 		A19EDA561CE1BE0300AA35CB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A19EDA551CE1BE0300AA35CB /* AppDelegate.m */; };
 		A19EDA5F1CE1BE0300AA35CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A19EDA5D1CE1BE0300AA35CB /* Main.storyboard */; };
@@ -63,6 +66,10 @@
 		A13DE19B1CE3122800328823 /* image2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image2.jpg; sourceTree = "<group>"; };
 		A13DE19C1CE3122800328823 /* image3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image3.jpg; sourceTree = "<group>"; };
 		A13DE19D1CE3122800328823 /* image4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image4.jpg; sourceTree = "<group>"; };
+		A13DE1A11CE3182500328823 /* toutiao.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = toutiao.jpg; sourceTree = "<group>"; };
+		A13DE1A31CE32AD500328823 /* TaoTiaoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaoTiaoView.h; sourceTree = "<group>"; };
+		A13DE1A41CE32AD500328823 /* TaoTiaoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaoTiaoView.m; sourceTree = "<group>"; };
+		A13DE1A61CE32AF300328823 /* TaoTiaoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TaoTiaoView.xib; sourceTree = "<group>"; };
 		A19EDA4E1CE1BE0300AA35CB /* TaoBaoHomeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaoBaoHomeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A19EDA521CE1BE0300AA35CB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A19EDA541CE1BE0300AA35CB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -222,6 +229,9 @@
 				A13DE1911CE2FB5900328823 /* Footview0.h */,
 				A13DE1921CE2FB5900328823 /* Footview0.m */,
 				A13DE1931CE2FB5900328823 /* Footview0.xib */,
+				A13DE1A31CE32AD500328823 /* TaoTiaoView.h */,
+				A13DE1A41CE32AD500328823 /* TaoTiaoView.m */,
+				A13DE1A61CE32AF300328823 /* TaoTiaoView.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -270,6 +280,7 @@
 		A19EDA7A1CE1CA3800AA35CB /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				A13DE1A11CE3182500328823 /* toutiao.jpg */,
 				A13DE19B1CE3122800328823 /* image2.jpg */,
 				A13DE19C1CE3122800328823 /* image3.jpg */,
 				A13DE19D1CE3122800328823 /* image4.jpg */,
@@ -356,11 +367,13 @@
 				A19EDAA41CE1E9C900AA35CB /* GridCell2.xib in Resources */,
 				A19EDA961CE1DACD00AA35CB /* image1.jpg in Resources */,
 				A19EDAB61CE21D7900AA35CB /* 03.jpg in Resources */,
+				A13DE1A21CE3182500328823 /* toutiao.jpg in Resources */,
 				A19EDAB31CE21D7900AA35CB /* 01.jpg in Resources */,
 				A19EDAAE1CE1ECFC00AA35CB /* Cell1.xib in Resources */,
 				A19EDAB41CE21D7900AA35CB /* 02.jpg in Resources */,
 				A19EDA941CE1D68F00AA35CB /* Headview3.xib in Resources */,
 				A19EDA8A1CE1D66200AA35CB /* Headview1.xib in Resources */,
+				A13DE1A71CE32AF300328823 /* TaoTiaoView.xib in Resources */,
 				A13DE1881CE2EA0000328823 /* mini4.png in Resources */,
 				A13DE19F1CE3122800328823 /* image3.jpg in Resources */,
 				A19EDA641CE1BE0400AA35CB /* LaunchScreen.storyboard in Resources */,
@@ -382,6 +395,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A13DE1A51CE32AD500328823 /* TaoTiaoView.m in Sources */,
 				A19EDA7C1CE1CA3800AA35CB /* SecondViewController.m in Sources */,
 				A13DE1941CE2FB5900328823 /* Footview0.m in Sources */,
 				A19EDA561CE1BE0300AA35CB /* AppDelegate.m in Sources */,

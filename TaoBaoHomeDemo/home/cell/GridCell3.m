@@ -19,11 +19,13 @@
     iv.clipsToBounds = YES;
 }
 
-//为什么不能用呢，一有这个方法就等比约束就不对啊
+//为什么获取的不是正确的值，值是xib对应的width，非实际width
 //本来 cornerRadius 是设置在这里的
 //有大神知道的指点下 谢谢
-//- (void)layoutSubviews {
-//
-//}
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    XunLog(@"宽度 %f", iv.frame.size.width);
+    //iv.layer.cornerRadius  = iv.frame.size.width /2;
+}
 
 @end

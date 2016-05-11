@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="BPS-5X-hwU" customClass="TaoTiaoView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="淘宝开新店了优惠多多，速度购" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2a-Sh-qu8">
+                    <rect key="frame" x="8" y="4" width="304" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="hvp-kG-ltc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="哈哈，你被骗了，好笨哦" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Q3-54-Vbu">
+                    <rect key="frame" x="8" y="24" width="304" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="KtN-hs-f7j"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="f2a-Sh-qu8" secondAttribute="trailing" constant="8" id="7n0-hx-6pR"/>
+                <constraint firstItem="f2a-Sh-qu8" firstAttribute="top" secondItem="BPS-5X-hwU" secondAttribute="top" constant="4" id="9s2-wq-q2p"/>
+                <constraint firstItem="f2a-Sh-qu8" firstAttribute="leading" secondItem="BPS-5X-hwU" secondAttribute="leading" constant="8" id="E70-eq-j9x"/>
+                <constraint firstItem="1Q3-54-Vbu" firstAttribute="leading" secondItem="BPS-5X-hwU" secondAttribute="leading" constant="8" id="NoE-Nu-qYh"/>
+                <constraint firstAttribute="trailing" secondItem="1Q3-54-Vbu" secondAttribute="trailing" constant="8" id="hMw-5c-MF1"/>
+                <constraint firstItem="1Q3-54-Vbu" firstAttribute="top" secondItem="f2a-Sh-qu8" secondAttribute="bottom" id="vZv-sn-SYL"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="lab1" destination="f2a-Sh-qu8" id="ahB-80-eb8"/>
+                <outlet property="lab2" destination="1Q3-54-Vbu" id="iJ1-0u-mjt"/>
+            </connections>
+            <point key="canvasLocation" x="308" y="-105"/>
+        </view>
+    </objects>
+</document>

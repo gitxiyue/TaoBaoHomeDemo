@@ -167,8 +167,8 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
         //减1去除误差
-        XunLog(@"########%f", SCREEN_W/5-8/5 -1);
-        return CGSizeMake(SCREEN_W/5-8/5 -1, SCREEN_W/5 + 20);
+        //XunLog(@"########%f", (SCREEN_W-4-4-1)/5;
+        return CGSizeMake((SCREEN_W-4-4-1)/5 , SCREEN_W/5 + 20);
     }
     if (indexPath.section == 1) {
         return CGSizeMake(SCREEN_W, cell_height(190)+8);//cell_height(200)
@@ -185,13 +185,13 @@
 //head 宽高
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
     if (section == 0) {
-        return CGSizeMake(SCREEN_W, SCREEN_W/4);
+        return CGSizeMake(SCREEN_W, SCREEN_W/4); //图片滚动的宽高
     }
     if (section == 2) {
-        return CGSizeMake(SCREEN_W, 50);
+        return CGSizeMake(SCREEN_W, 50);    //猜你喜欢的宽高
     }
     if (section == 3) {
-        return CGSizeMake(SCREEN_W, 35);
+        return CGSizeMake(SCREEN_W, 35);    //推荐适合的宽高
     }
     return CGSizeMake(0, 0);
 }
@@ -199,10 +199,10 @@
 //foot 宽高
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section {
     if (section == 0) {
-        return CGSizeMake(SCREEN_W, 60);
+        return CGSizeMake(SCREEN_W, 50);  //淘宝头条的宽高
     }
     if (section == 3) {
-        return CGSizeMake(SCREEN_W, 110);
+        return CGSizeMake(SCREEN_W, 110); //最底部view的宽高
     }
     return CGSizeZero;
 }
@@ -210,7 +210,7 @@
 //边缘间距
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
     if (section == 0) {
-        return UIEdgeInsetsMake(4.0f, 4.0f, 4.0f, 4.0f);
+        return UIEdgeInsetsMake(2.0f, 2.0f, 2.0f, 2.0f);
     }
     return UIEdgeInsetsZero;
 }
@@ -223,7 +223,7 @@
 //y 宽度
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
     if (section == 0) {
-        return 2;
+        return 1;
     }
     if (section == 1) {
         return 0;
