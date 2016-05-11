@@ -24,8 +24,8 @@
     scroll.showsVerticalScrollIndicator   = NO;
     UIImageView *image1 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_W, SCREEN_W/4)];
     UIImageView *image2 = [[UIImageView alloc] initWithFrame:CGRectMake(SCREEN_W, 0, SCREEN_W, SCREEN_W/4)];
-    image1.image = [UIImage imageNamed:@"image2.png"];
-    image2.image = [UIImage imageNamed:@"image4.png"];
+    image1.image = [UIImage imageNamed:@"image2.jpg"];
+    image2.image = [UIImage imageNamed:@"image4.jpg"];
     [scroll addSubview:image1];
     [scroll addSubview:image2];
 }

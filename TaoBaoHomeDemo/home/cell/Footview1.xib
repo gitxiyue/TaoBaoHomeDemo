@@ -20,7 +20,7 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.65026041666666679" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image2.png" translatesAutoresizingMaskIntoConstraints="NO" id="7iH-oC-cwn">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="7iH-oC-cwn">
                     <rect key="frame" x="8" y="33" width="304" height="70"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="70" id="oGM-J3-cDr"/>
@@ -39,6 +39,6 @@
         </collectionReusableView>
     </objects>
     <resources>
-        <image name="image2.png" width="984" height="443"/>
+        <image name="image2.jpg" width="984" height="443"/>
     </resources>
 </document>

@@ -43,13 +43,13 @@
                             <constraint firstAttribute="width" secondItem="fzy-Ld-xTx" secondAttribute="height" multiplier="1:1" id="QA6-jV-8cz"/>
                         </constraints>
                     </imageView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image2.png" translatesAutoresizingMaskIntoConstraints="NO" id="pBM-MH-dSF">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="pBM-MH-dSF">
                         <rect key="frame" x="100" y="0.0" width="50" height="50"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="pBM-MH-dSF" secondAttribute="height" multiplier="1:1" id="wXV-Zs-j5p"/>
                         </constraints>
                     </imageView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image3.png" translatesAutoresizingMaskIntoConstraints="NO" id="dDU-HU-SUP">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image3.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="dDU-HU-SUP">
                         <rect key="frame" x="100" y="50" width="50" height="50"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="dDU-HU-SUP" secondAttribute="height" multiplier="1:1" id="Ba6-Xn-swl"/>
@@ -86,7 +86,7 @@
     </objects>
     <resources>
         <image name="image1.jpg" width="682" height="1024"/>
-        <image name="image2.png" width="984" height="443"/>
-        <image name="image3.png" width="372" height="375"/>
+        <image name="image2.jpg" width="984" height="443"/>
+        <image name="image3.jpg" width="372" height="375"/>
     </resources>
 </document>
