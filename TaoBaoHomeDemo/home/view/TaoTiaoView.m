@@ -33,4 +33,9 @@
     return self;
 }
 
+- (void)setData:(NSString *)str1 str:(NSString *)str2 {
+    lab1.text = str1;
+    lab2.text = str2;
+}
+
 @end

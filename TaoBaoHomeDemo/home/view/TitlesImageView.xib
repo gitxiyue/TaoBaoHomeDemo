@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TitlesImageView">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="233"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mini3.png" translatesAutoresizingMaskIntoConstraints="NO" id="hlB-Vm-czv">
+                    <rect key="frame" x="0.0" y="33" width="200" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="hlB-Vm-czv" secondAttribute="height" multiplier="1:1" id="gU2-JH-0rD"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="红人圈" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abf-gW-rEa">
+                    <rect key="frame" x="0.0" y="0.0" width="48" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="12" id="AD2-cn-ZLr"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="48" id="Vk6-hw-ilM"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="网红的私人衣服" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FeH-mX-Pju">
+                    <rect key="frame" x="0.0" y="18" width="200" height="12"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="10" id="FS5-oE-25L"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
+                    <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="hlB-Vm-czv" firstAttribute="top" secondItem="FeH-mX-Pju" secondAttribute="bottom" constant="3" id="5kO-fc-gIZ"/>
+                <constraint firstAttribute="trailing" secondItem="FeH-mX-Pju" secondAttribute="trailing" id="6sA-Sj-1Sr"/>
+                <constraint firstItem="abf-gW-rEa" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Bgt-GW-3Lv"/>
+                <constraint firstAttribute="trailing" secondItem="hlB-Vm-czv" secondAttribute="trailing" id="GKF-OF-WBq"/>
+                <constraint firstItem="FeH-mX-Pju" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Zf2-Fs-PBg"/>
+                <constraint firstItem="hlB-Vm-czv" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="eHK-wy-kez"/>
+                <constraint firstItem="FeH-mX-Pju" firstAttribute="top" secondItem="abf-gW-rEa" secondAttribute="bottom" constant="3" id="sIt-rl-aMW"/>
+                <constraint firstItem="abf-gW-rEa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="zhh-Nl-RYj"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="imageview" destination="hlB-Vm-czv" id="sbo-YR-HYZ"/>
+                <outlet property="subTitle" destination="FeH-mX-Pju" id="VmI-l4-dEt"/>
+                <outlet property="title" destination="abf-gW-rEa" id="6ZT-Hi-Oj7"/>
+            </connections>
+            <point key="canvasLocation" x="434" y="379.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="mini3.png" width="102" height="100"/>
+    </resources>
+</document>

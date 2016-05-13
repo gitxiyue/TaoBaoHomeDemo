@@ -18,6 +18,8 @@
 
 
 #import "Cell1.h"
+#import "HotShiChangCell.h"
+#import "DaRenTaoCell.h"
 
 //cell等比高
 #define cell_height(i) SCREEN_W*((i)/375.0f)
@@ -27,6 +29,8 @@
 @property (nonatomic ,strong) UICollectionView *grid;
 @property (nonatomic, strong) NSArray *dataArr;
 @property (nonatomic, strong) NSArray *sectionArr;
+
+@property (nonatomic, strong) UILabel *msgLab;
 @end
 
 @implementation FirstViewController
@@ -61,6 +65,8 @@
     [_grid registerNib:[UINib nibWithNibName:@"GridCell3" bundle:nil] forCellWithReuseIdentifier:@"GridCell3"];
     
     [_grid registerNib:[UINib nibWithNibName:@"Cell1" bundle:nil] forCellWithReuseIdentifier:@"Cell1"];
+    [_grid registerNib:[UINib nibWithNibName:@"HotShiChangCell" bundle:nil] forCellWithReuseIdentifier:@"HotShiChangCell"];
+    [_grid registerNib:[UINib nibWithNibName:@"DaRenTaoCell" bundle:nil] forCellWithReuseIdentifier:@"DaRenTaoCell"];
     
     [_grid registerNib:[UINib nibWithNibName:@"Headview1" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"headview1"];
     [_grid registerNib:[UINib nibWithNibName:@"Headview2" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"headview2"];
@@ -115,8 +121,32 @@
         gridcell = cell;
     }
     else if (indexPath.section == 1) {
-        Cell1 *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell1" forIndexPath:indexPath];
-        gridcell = cell;
+        if (indexPath.row == 0){
+            Cell1 *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell1" forIndexPath:indexPath];
+            gridcell = cell;
+        }
+        else if (indexPath.row == 1) {
+            Cell1 *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell1" forIndexPath:indexPath];
+            gridcell = cell;
+        }
+        else if (indexPath.row == 2) {
+            Cell1 *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell1" forIndexPath:indexPath];
+            gridcell = cell;
+        }
+        else if (indexPath.row == 3) {
+            Cell1 *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell1" forIndexPath:indexPath];
+            gridcell = cell;
+        }
+        else if (indexPath.row == 4) {
+            HotShiChangCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"HotShiChangCell" forIndexPath:indexPath];
+            gridcell = cell;
+        }
+        else if (indexPath.row == 5) {
+            DaRenTaoCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"DaRenTaoCell" forIndexPath:indexPath];
+            gridcell = cell;
+        }else {
+            
+        }
     }
     else if (indexPath.section == 2) {
         GridCell2 *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"GridCell2" forIndexPath:indexPath];
@@ -165,18 +195,27 @@
 
 //item 宽高
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section == 0) {
+    if (indexPath.section == 0) {//9宫格组
         //减1去除误差
         //XunLog(@"########%f", (SCREEN_W-4-4-1)/5;
         return CGSizeMake((SCREEN_W-4-4-1)/5 , SCREEN_W/5 + 20);
     }
-    if (indexPath.section == 1) {
-        return CGSizeMake(SCREEN_W, cell_height(190)+8);//cell_height(200)
+    if (indexPath.section == 1) {//乱七八糟组
+        if (indexPath.row == 0) {
+            return CGSizeMake(SCREEN_W, cell_height(190)+8);
+        }
+        if (indexPath.row == 4) {
+            return CGSizeMake(SCREEN_W, 8+30+1+120+1+70 +2*101);
+        }
+        if (indexPath.row == 5) {
+            return CGSizeMake(SCREEN_W, (SCREEN_W-32)/3 +8+30+8+42+40);
+        }
+        return CGSizeMake(SCREEN_W, cell_height(190)+8);
     }
-    if (indexPath.section == 2) {
+    if (indexPath.section == 2) {//喜欢组
         return CGSizeMake(SCREEN_W/2-4/2, (SCREEN_W/2-4/2)*2/3 +48);
     }
-    if (indexPath.section == 3) {
+    if (indexPath.section == 3) {//推荐组
         return CGSizeMake(SCREEN_W/2-4/2, SCREEN_W/2-4/2 +80);
     }
     return CGSizeMake(0, 0);
@@ -215,12 +254,12 @@
     return UIEdgeInsetsZero;
 }
 
-//x 宽度
+//x 间距
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
     return 0;
 }
 
-//y 宽度
+//y 间距
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
     if (section == 0) {
         return 1;
@@ -235,7 +274,35 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 1) {
+        return;
+    }
+    [self show:[NSString stringWithFormat:@"你选择的是%zd，%zd", indexPath.section, indexPath.row]];
     XunLog(@"你选择的是%zd，%zd", indexPath.section, indexPath.row);
+}
+
+- (void)show:(nullable NSString *)msg {
+    if (_msgLab) {
+        return;
+    }
+    _msgLab = [[UILabel alloc] initWithFrame:CGRectMake(0, -64, SCREEN_W, 64)];
+    _msgLab.backgroundColor = RGBA(0, 0, 0, 0.6);
+    _msgLab.text = msg;
+    _msgLab.textColor = [UIColor whiteColor];
+    _msgLab.font = [UIFont boldSystemFontOfSize:18];
+    _msgLab.textAlignment = NSTextAlignmentCenter;
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    [window addSubview:_msgLab];
+    
+    [UIView animateWithDuration:0.2 animations:^{
+        CGRect frame = _msgLab.frame;
+        frame.origin.y = 0;
+        _msgLab.frame = frame;
+    }];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [_msgLab removeFromSuperview];
+        _msgLab = nil;
+    });
 }
 
 @end

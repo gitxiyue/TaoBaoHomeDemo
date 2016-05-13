@@ -10,4 +10,5 @@
 
 @interface TaoTiaoView : UIView
 
+- (void)setData:(NSString *)str1 str:(NSString *)str2;
 @end
