@@ -38,4 +38,8 @@
     lab2.text = str2;
 }
 
+- (NSString *)toString {
+    return lab1.text;
+}
+
 @end

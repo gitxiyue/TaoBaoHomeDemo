@@ -7,6 +7,7 @@
 //
 
 #import "FirstViewController.h"
+#import "YYFPSLabel.h"
 #import "GridCell.h"
 #import "GridCell2.h"
 #import "GridCell3.h"
@@ -44,6 +45,8 @@
 
 - (void)setUpView {
     self.title = @"首页";
+    YYFPSLabel *fps = [YYFPSLabel new];
+    self.navigationItem.titleView = fps;
     self.navigationController.navigationBar.tintColor = [UIColor grayColor];
     UIBarButtonItem *leftI = [[UIBarButtonItem alloc] initWithTitle:@"扫一扫" style:UIBarButtonItemStyleDone target:self action:@selector(leftButtonClick)];
     self.navigationItem.leftBarButtonItem  = leftI;

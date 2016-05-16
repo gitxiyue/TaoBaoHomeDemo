@@ -31,6 +31,7 @@
 		A13DE1A21CE3182500328823 /* toutiao.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A13DE1A11CE3182500328823 /* toutiao.jpg */; };
 		A13DE1A51CE32AD500328823 /* TaoTiaoView.m in Sources */ = {isa = PBXBuildFile; fileRef = A13DE1A41CE32AD500328823 /* TaoTiaoView.m */; };
 		A13DE1A71CE32AF300328823 /* TaoTiaoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A13DE1A61CE32AF300328823 /* TaoTiaoView.xib */; };
+		A14FAF041CE9BC8400EE5831 /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A14FAF031CE9BC8400EE5831 /* YYFPSLabel.m */; };
 		A19EDA531CE1BE0300AA35CB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A19EDA521CE1BE0300AA35CB /* main.m */; };
 		A19EDA561CE1BE0300AA35CB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A19EDA551CE1BE0300AA35CB /* AppDelegate.m */; };
 		A19EDA5F1CE1BE0300AA35CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A19EDA5D1CE1BE0300AA35CB /* Main.storyboard */; };
@@ -98,6 +99,8 @@
 		A13DE1A31CE32AD500328823 /* TaoTiaoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaoTiaoView.h; sourceTree = "<group>"; };
 		A13DE1A41CE32AD500328823 /* TaoTiaoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaoTiaoView.m; sourceTree = "<group>"; };
 		A13DE1A61CE32AF300328823 /* TaoTiaoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TaoTiaoView.xib; sourceTree = "<group>"; };
+		A14FAF021CE9BC8400EE5831 /* YYFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFPSLabel.h; sourceTree = "<group>"; };
+		A14FAF031CE9BC8400EE5831 /* YYFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYFPSLabel.m; sourceTree = "<group>"; };
 		A19EDA4E1CE1BE0300AA35CB /* TaoBaoHomeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaoBaoHomeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A19EDA521CE1BE0300AA35CB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A19EDA541CE1BE0300AA35CB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -195,6 +198,8 @@
 		A19EDA511CE1BE0300AA35CB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A14FAF021CE9BC8400EE5831 /* YYFPSLabel.h */,
+				A14FAF031CE9BC8400EE5831 /* YYFPSLabel.m */,
 				A107E7B21CE5DF21002D83BE /* UIGestureRecognizer+YYAdd.h */,
 				A107E7B31CE5DF21002D83BE /* UIGestureRecognizer+YYAdd.m */,
 				A107E7AF1CE5D94F002D83BE /* XunUtils.h */,
@@ -532,6 +537,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A14FAF041CE9BC8400EE5831 /* YYFPSLabel.m in Sources */,
 				A1B6D5A31CE500C0008A8D54 /* TitlesImageViewFull.m in Sources */,
 				A13DE1A51CE32AD500328823 /* TaoTiaoView.m in Sources */,
 				A19EDA7C1CE1CA3800AA35CB /* SecondViewController.m in Sources */,
